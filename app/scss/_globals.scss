@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins";
 
 html {
   font-size: 100%;
@@ -43,7 +44,7 @@ a, a:visited, a:hover {
 // Buttons
 
 .button {
-  padding: 1rem 1.875rem;
+  padding: 0.875rem 2.1875rem;
   border-radius: 50px;
   cursor: pointer;
   border: 0;
@@ -57,9 +58,13 @@ a, a:visited, a:hover {
 
 // Visibility
 .hide-for-mobile { // and tablet
-
+  @include breakpoint-down(medium){
+    display: none;
+  }
 }
 
 .hide-for-desktop {
-
+  @include breakpoint-up(large){
+    display: none;
+  }
 }

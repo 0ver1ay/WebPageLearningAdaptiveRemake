@@ -37,7 +37,7 @@ a, a:visited, a:hover {
 }
 
 .button {
-  padding: 1rem 1.875rem;
+  padding: 0.875rem 2.1875rem;
   border-radius: 50px;
   cursor: pointer;
   border: 0;
@@ -49,8 +49,29 @@ a, a:visited, a:hover {
   background-color: linear-gradient(to left, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
 }
 
+@media (max-width: 63.9375em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
 .header nav {
-  padding: 24px;
+  padding: 0 1.5rem;
+}
+.header__logo {
+  margin-top: 1.8125rem;
+  margin-bottom: 1.8125rem;
+  height: 22px;
+}
+.header__logo img {
+  width: 8.8125rem;
+  height: 1.375rem;
 }
 .header__menu > span {
   display: block;
@@ -61,13 +82,49 @@ a, a:visited, a:hover {
 .header__menu > span:not(:last-child) {
   margin-bottom: 3px;
 }
-.header__menu__links {
+.header__links {
   font-size: 0.875rem;
 }
-.header__menu__cta {
+.header__links a {
+  position: relative;
+  font-size: 0.875rem;
+  color: hsl(233deg, 8%, 62%);
+  transition: color 300ms ease-in-out;
+  height: 80px;
+  padding-top: 31px;
+  padding-bottom: 31px;
+}
+.header__links a:not(:last-child) {
+  margin-right: 32px;
+}
+.header__links a:hover {
+  color: hsl(233deg, 26%, 24%);
+}
+.header__links a:hover:before {
+  transition: opacity 300ms ease-in-out;
+  background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
+  opacity: 1;
+}
+.header__links a:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 5px;
+  bottom: 0rem;
+  border-radius: 1px;
+  right: 0;
+  background: linear-gradient(to right, hsl(136deg, 65%, 51%), hsl(192deg, 70%, 51%));
+  opacity: 0;
+}
+.header__cta {
+  opacity: 1;
   font-size: 0.875rem;
 }
-
-@madia (min-width: 64em) {}
+.header__cta:hover {
+  transition: opacity 300ms ease-in-out, color 300ms ease-in-out;
+  color: hsl(0deg, 0%, 100%);
+  opacity: 0.75;
+}
 
 /*# sourceMappingURL=style.css.map */
