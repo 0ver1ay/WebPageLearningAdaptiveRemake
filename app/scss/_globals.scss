@@ -1,0 +1,65 @@
+@import "variables";
+
+html {
+  font-size: 100%;
+  box-sizing: border-box; // padding включается в общий расчет размера элемента (база!)
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Public Sans', sans-serif;
+  font-size: 1.125rem; // 1rem = 16px
+  font-weight: 300;
+  color: $grayishBlue;
+  background-color: $white;
+  line-height: 1.3;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+  color: $grayishBlue;
+}
+
+// Flexbox styles
+
+.flex {
+  display: flex;
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-jc-c {
+    justify-content: center;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+}
+
+// Buttons
+
+.button {
+  padding: 1rem 1.875rem;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  color: $white;
+  font-weight: $font-sm;
+  background: linear-gradient(to right, $lightGreen, $brightCyan);
+  &:hover{
+    background-color: linear-gradient(to left, $lightGreen, $brightCyan );
+  }
+}
+
+// Visibility
+.hide-for-mobile { // and tablet
+
+}
+
+.hide-for-desktop {
+
+}
