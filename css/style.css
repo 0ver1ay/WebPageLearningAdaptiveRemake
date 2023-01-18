@@ -101,6 +101,9 @@ a, a:visited, a:hover {
   width: 8.8125rem;
   height: 1.375rem;
 }
+.header__menu:hover {
+  cursor: pointer;
+}
 .header__menu > span {
   display: block;
   width: 26px;
@@ -132,12 +135,11 @@ a, a:visited, a:hover {
   transform: translateY(0) rotateZ(0);
 }
 .header__links {
-  font-size: 1.125rem;
   font-weight: 400;
 }
 .header__links a {
   position: relative;
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   color: hsl(233deg, 8%, 62%);
   transition: color 300ms ease-in-out;
   height: 80px;
@@ -169,7 +171,7 @@ a, a:visited, a:hover {
 }
 .header__cta {
   opacity: 1;
-  font-size: 0.875rem;
+  font-size: 1.125rem;
 }
 .header__cta:hover {
   transition: opacity 300ms ease-in-out, color 300ms ease-in-out;
@@ -189,11 +191,11 @@ a, a:visited, a:hover {
 .header .mobile__menu > a {
   color: hsl(233deg, 26%, 24%);
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 400;
   width: 100%;
   text-align: center;
   display: block;
-  line-height: 54px;
+  line-height: 3.375rem;
   height: 54px;
 }
 .header .mobile__menu > a:hover {
@@ -208,7 +210,7 @@ a, a:visited, a:hover {
 
 main {
   position: absolute;
-  top: 80px;
+  top: 5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
