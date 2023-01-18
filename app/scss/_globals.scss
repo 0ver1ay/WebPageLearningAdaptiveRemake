@@ -39,6 +39,9 @@ a, a:visited, a:hover {
   &-ai-c {
     align-items: center;
   }
+  &-dir-col {
+    flex-direction: column;
+  }
 }
 
 // Buttons
