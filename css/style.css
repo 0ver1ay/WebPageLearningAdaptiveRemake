@@ -265,7 +265,7 @@ main {
 }
 .hero__image {
   position: relative;
-  background-image: url("./images/bg-intro-mobile.svg");
+  background-image: url("../images/bg-intro-mobile.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -275,14 +275,14 @@ main {
   .hero__image {
     flex: 3;
     order: 2;
-    background-image: url("./images/bg-intro-desktop.svg");
+    background-image: url("../images/bg-intro-desktop.svg");
     background-position: left -13rem;
   }
 }
 .hero__image::before {
   content: "";
   position: absolute;
-  background-image: url("./images/image-mockups.png");
+  background-image: url("../images/image-mockups.png");
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -473,7 +473,7 @@ main {
 }
 .hero__image {
   position: relative;
-  background-image: url("./images/bg-intro-mobile.svg");
+  background-image: url("../images/bg-intro-mobile.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -483,14 +483,14 @@ main {
   .hero__image {
     flex: 3;
     order: 2;
-    background-image: url("./images/bg-intro-desktop.svg");
+    background-image: url("../images/bg-intro-desktop.svg");
     background-position: left -13rem;
   }
 }
 .hero__image::before {
   content: "";
   position: absolute;
-  background-image: url("./images/image-mockups.png");
+  background-image: url("../images/image-mockups.png");
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1062,16 +1062,16 @@ main {
   }
 }
 .articles--card:nth-of-type(1) .articles--image {
-  background-image: url("./images/image-currency.jpg");
+  background-image: url("../images/image-currency.jpg");
 }
 .articles--card:nth-of-type(2) .articles--image {
-  background-image: url("./images/image-plane.jpg");
+  background-image: url("../images/image-plane.jpg");
 }
 .articles--card:nth-of-type(3) .articles--image {
-  background-image: url("./images/image-restaurant.jpg");
+  background-image: url("../images/image-restaurant.jpg");
 }
 .articles--card:nth-of-type(4) .articles--image {
-  background-image: url("./images/image-confetti.jpg");
+  background-image: url("../images/image-confetti.jpg");
 }
 @media (max-width: 63.9375em) {
   .articles--card:not(:last-child) {
