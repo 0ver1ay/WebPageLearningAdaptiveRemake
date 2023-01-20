@@ -23,6 +23,11 @@
   .invisible{
     opacity: 0;
   }
+
+  .displaynone{
+    display: none;
+  }
+
   nav {
     padding:  0 1.5rem; //1.0625rem
    // border: 1px solid red;
@@ -97,13 +102,13 @@
         }
         &:hover {
           color: $darkBlue;
-          &:before {
+          &::before {
             transition: opacity 300ms ease-in-out;
             background: linear-gradient(to right, $lightGreen, $brightCyan);
             opacity: 1;
           }
         }
-        &:before {
+        &::before {
           content:"";
           position: absolute;
           display: block;
@@ -120,11 +125,6 @@
     &__cta {
       opacity: 1;
       font-size: $font-med;
-      &:hover{
-        transition: opacity 300ms ease-in-out,color 300ms ease-in-out;
-        color: $white;
-        opacity: 0.75;
-      }
     }
 
   .mobile__menu{

@@ -1,0 +1,96 @@
+@import "variables";
+@import "globals";
+@import "mixins";
+@import "header";
+
+.footer{
+  background-color: $darkBlue;
+  padding: 2rem 4rem;
+ // border: 1px solid red;
+  @include breakpoint-down(medium){
+   flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+    padding-bottom: 0;
+  }
+  section {
+    @include breakpoint-down(medium){
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+
+    }
+    //border: 1px solid blue;
+
+  }
+
+  &--links{
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    align-items: start;
+    justify-content: space-between;
+
+    .header__logo{
+      @include breakpoint-down(medium){
+        margin-bottom: 1rem;
+      }
+      margin: 0;
+    }
+    .social{
+      a{
+        &:hover{
+          img{
+            fill: $lightGreen;
+          }
+
+        }
+      }
+
+      //border: 1px solid green;
+    }
+
+  }
+  &--menu{
+    flex: 3;
+    justify-content: space-between;
+      .menu__half{
+        @include breakpoint-down(medium){
+        align-items: center;
+      }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        //border: 1px solid red;
+
+        .menu__link{
+          margin-bottom: 0.5rem;
+          &:hover{
+            @include breakpoint-down(medium){
+              color: $lightGreen;
+            }
+            color: $lightGreen;
+          }
+        }
+      }
+
+  }
+
+  &--request{
+
+
+
+
+    flex: 6;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    p{
+
+
+    }
+  }
+}
+

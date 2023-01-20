@@ -1,0 +1,59 @@
+@import "variables";
+@import "globals";
+@import "mixins";
+@import "hero";
+
+.properties{
+  background-color: $lightGrayishBlue;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  @include breakpoint-down(medium){
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+  }
+  &--header{
+    h2{
+      padding-top: 3rem;
+      font-size: $font-large;
+      font-weight: 400;
+    }
+    p{
+      padding-bottom: 3rem;
+    }
+  }
+  &--content{
+    flex-direction: row;
+    @include breakpoint-down(medium){
+      flex-direction: column;
+      //background-color: red;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .card{
+      &:not(:last-child){
+        padding-right: 4rem;
+        padding-bottom: 2rem;
+        @include breakpoint-down(medium){
+          padding-right: 0;
+        }
+      }
+
+      .properties--image{
+        img{
+          padding-bottom: 1rem;
+        }
+      }
+      h3 {
+        padding-bottom: 1rem;
+      }
+      p {
+        padding-bottom: 2rem;
+      }
+    }
+
+
+  }
+}
+

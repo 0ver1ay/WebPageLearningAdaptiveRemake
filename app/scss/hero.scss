@@ -1,0 +1,131 @@
+@import "variables";
+@import "mixins";
+
+.hero-wrapper{
+  width: 100%;
+
+}
+
+.hero {
+  background-color: $veryLightGray;
+ // border: 1px solid red;
+
+@include breakpoint-up(large){
+    display: flex;
+    min-height: 40.9375rem;
+    min-width: 100%;
+    padding-right: 0;
+  }
+
+  .container {
+  //  border: 1px solid blue;
+    @include breakpoint-up(large){
+      flex: 2;
+      order: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      padding-right: 0;
+
+    }
+
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &__image {
+
+    @include breakpoint-up(large){
+      flex: 3;
+      order: 2;
+      background-image: url("/images/bg-intro-desktop.svg");
+      background-position: left -13rem;
+
+    }
+
+    position: relative;
+    background-image: url("/images/bg-intro-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 17.5rem;
+    &::before {
+      @include breakpoint-up(small){
+        background-size: 32%;
+        transform: translateY(0%);
+      }
+      @include breakpoint-up(medium){
+        background-size: 20%;
+        transform: translateY(4%);
+      }
+      @include breakpoint-up(large){
+       // background-size: 60%;
+       // transform: translateY(10%);
+        background-size: 60%;
+        transform: translateY(0);
+      }
+      @include breakpoint-up(xlarge){
+       // background-size: 45%;
+        //transform: translateY(10%);
+        background-size: 50%;
+        transform: translateY(2%);
+      }
+      @include breakpoint-up(xxlarge){
+        // background-size: 45%;
+        //transform: translateY(10%);
+        background-size: 32%;
+        transform: translateY(0);
+      }
+
+
+      content: "";
+      position: absolute;
+      background-image: url("/images/image-mockups.png");
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      max-height: 100%;
+      min-height: 16rem;
+      height: 100%;
+      width: 100%;
+      transform: translateY(0%);
+    }
+  }
+  &__text {
+
+
+
+    > h1 {
+      font-weight: 300;
+      color: $darkBlue;
+      line-height: 1.2; // для h1 пойдет
+      font-size: 2.31rem;
+      text-align: center;
+      @include breakpoint-up(large){
+        text-align: left;
+        font-size:$font-xlarge;
+      }
+    }
+    > p {
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+      margin-top: 1rem;
+      text-align: center;
+      @include breakpoint-up(large){
+        text-align: left;
+      }
+    }
+  }
+  .button-wrapper{
+
+    text-align: center;
+  }
+  &_cta {
+
+    display: inline-block;
+
+  }
+}

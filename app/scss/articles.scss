@@ -1,0 +1,126 @@
+@import "variables";
+@import "globals";
+@import "mixins";
+
+
+.articles {
+  background-color: $veryLightGray;
+  //border: 1px solid red;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 2rem;
+  @include breakpoint-down(medium){
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+  }
+  &--header{
+    //border: 1px solid green;
+    h2{
+
+      @include breakpoint-down(large){
+        text-align: center;
+      }
+      font-size: $font-large;
+      font-weight: 400;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+  }
+  &--content{
+      margin-bottom: 3rem;
+      //border: 1px solid red;
+      flex-wrap: wrap;
+
+    @include breakpoint-down(large){
+     // flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    &:not(:last-child){
+      margin-right: 2rem;
+    }
+  }
+  &--card{
+    max-width: 18rem;
+    min-width: 18rem;
+    min-height: 30rem;
+    @include breakpoint-down(large){
+      max-width: 27rem;
+      min-width: 27rem;
+      margin-bottom: 3rem;
+    }
+
+    @include breakpoint-down(small){
+      justify-content: space-around;
+      max-width: 18rem;
+      min-width: 18rem;
+      margin-bottom: 3rem;
+    }
+    overflow: hidden;
+    &:nth-of-type(1){
+      .articles--image{
+        background-image: url("/images/image-currency.jpg");
+      }
+    }
+    &:nth-of-type(2){
+      .articles--image{
+        background-image: url("/images/image-plane.jpg");
+      }
+    }
+    &:nth-of-type(3){
+      .articles--image{
+        background-image: url("/images/image-restaurant.jpg");
+      }
+    }
+    &:nth-of-type(4){
+      .articles--image{
+        background-image: url("/images/image-confetti.jpg");
+      }
+    }
+    &:not(:last-child){
+      //margin-right: 2rem;
+      @include breakpoint-down(medium){
+        margin-right: 0;
+        text-align: center;
+      }
+    }
+    flex-direction: column;
+    //border: 1px solid blue;
+    border-radius: 20px;
+    background-color: $white;
+
+     // режет картинку под ним по углам
+    .articles--image{
+
+        height: 14rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 125%;
+    }
+    .articles--wrapper{
+
+      margin: 2rem;
+      margin-bottom: 0;
+
+      h6{
+
+        color: $grayishBlue;
+        font-weight: 400;
+      }
+      >p:first-of-type{
+        &:hover{
+          cursor: pointer;
+          color: $lightGreen;
+        }
+        color: $darkBlue;
+        font-size: $font-med;
+      }
+      >p:last-of-type{
+        font-size: $font-med;
+      }
+    }
+  }
+}
