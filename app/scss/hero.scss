@@ -41,13 +41,13 @@
     @include breakpoint-up(large){
       flex: 3;
       order: 2;
-      background-image: url("/images/bg-intro-desktop.svg");
+      background-image: url("../images/bg-intro-desktop.svg");
       background-position: left -13rem;
 
     }
 
     position: relative;
-    background-image: url("/images/bg-intro-mobile.svg");
+    background-image: url("../images/bg-intro-mobile.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -83,7 +83,7 @@
 
       content: "";
       position: absolute;
-      background-image: url("/images/image-mockups.png");
+      background-image: url("../images/image-mockups.png");
       background-size: 50%;
       background-repeat: no-repeat;
       background-position: center center;
